@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body class="flex-container">
+
+    @RenderBody()
+    <footer>
+        <div class="section-container">
+            <address>
+                Avenida Paulista, 50 - SP
+                <br>
+                Telefone: +55 11 1234-4321
+                <br>
+                agora.vai@email.com
+                <br>
+                <img src="imagens/facebook.png" alt="">
+                <img src="imagens/gmail.png" alt="">
+            </address>
+        </div>
+    </footer>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy;Empresa Agora Vai</p>
+        </footer>
+    </div>
+</body>
