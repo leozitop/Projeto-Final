@@ -1,4 +1,6 @@
-
+@{
+    var user = (string) ViewData["user"];
+}
 <nav>
     <div class="section-container">
         <ul>
@@ -7,6 +9,14 @@
             <li><a href='@Url.Action("Index", "Home")"#planos"'>Planos</a></li>
             <li><a href='@Url.Action("Index", "Home")"#equipe"'>Equipe</a></li>
             <li><a href='@Url.Action("Index", "Home")"#local"'>Local</a></li>
+            @if(string.IsNullOrEmpty(user))
+            {
+                <li><a id="bt_login" asp-controller="Cliente" asp-action="Login">Login/Cadastro</a></li>
+            }else{
+                <li><a href="bt_logout" asp-controller="Cliente" asp-action="Logout">Logout</a></li>
+            }
+
+            <li><a id="bt_pedido" asp-controller="Pedido" asp-action="Index">Pedir</a></li>
         </ul>
     </div>
 </nav>

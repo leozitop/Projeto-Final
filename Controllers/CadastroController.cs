@@ -10,7 +10,7 @@ namespace Projeto_Final.Controllers
     {
         private ClienteRepositorio clienteRepositorio = new ClienteRepositorio();
         public IActionResult Index(){
-            ViewData[""] = "Cadastro";
+            ViewData["NomeView"] = "Cadastro";
             return View();
         }
 
@@ -19,6 +19,7 @@ namespace Projeto_Final.Controllers
             cliente.Nome = form["nome"];
             cliente.Email = form["email"];
             cliente.Senha = form["senha"];
+            cliente.Endereco = form["endereco"];
             cliente.Telefone = form["telefone"];
             cliente.Cpf = form["cpf"];
             cliente.DataNascimento = DateTime.Parse(form["data-nascimento"]);

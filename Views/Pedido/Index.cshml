@@ -1,0 +1,50 @@
+@model Projeto-Final.ViewModels.PedidoViewModel
+
+<header>
+    @{
+        Html.RenderPartial("_HeaderNavBar");
+    }
+</header>
+
+<main>
+    <h2>Peça seu plano!</h2>
+    <form method="POST" action="Pedido/RegistrarPedido">
+        <div>
+            <label for="nome">Nome completo</label>
+            <br>
+            <input type="text" id="nome" name="nome" maxlength="40" minlength="10">
+        </div>
+
+        <div>
+            <label for="email">Email do usuário</label>
+            <br>
+            <input type="email" id="email" name="email">
+        </div>
+
+        <div>
+            <label for="endereco">Endereço</label>
+            <br>
+            <input type="endereco" id="endereco" name="endereco">
+        </div>
+
+        <div>
+            <label for="telefone">Telefone para contato</label>
+            <br>
+            <input type="text" id="telefone" name="telefone">
+        </div>
+
+        <div>
+            <label for="selecione">Planos</label>
+            <br>
+            <select name="selecione" id="selecione" required>
+                <option value="" disabled selected>Selecione o plano que deseja</option>
+                @foreach(var plano in Model.Planos)
+                {
+                    <option value=@plano.Nome>@plano.Nome</option>
+                }
+            </select>
+        </div>
+
+        <input type="submit" value="Encomendar produto!">
+    </form>
+</main>
