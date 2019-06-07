@@ -29,7 +29,7 @@ namespace Projeto_Final.Controllers
                 HttpContext.Session.SetString(SESSION_CLIENTE, cliente.Nome);
             }
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "Comentarios");
         }
 
         public IActionResult Logout(){

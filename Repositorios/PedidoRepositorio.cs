@@ -128,8 +128,6 @@ namespace Projeto_Final.Repositorios
             Pedido pedido = new Pedido();
             pedido.Id = ulong.Parse(ExtrairCampo("Id", registro));
             pedido.Cliente.Nome = ExtrairCampo("clienteNome", registro);
-            pedido.Cliente.Endereco = ExtrairCampo("clienteEndereco", registro);
-            pedido.Cliente.Telefone = ExtrairCampo("clienteTelefone", registro);
             pedido.Cliente.Email = ExtrairCampo("clienteEmail", registro);
             pedido.Produto.Nome = ExtrairCampo("produtoNome", registro);
             pedido.Produto.Preco = double.Parse(ExtrairCampo("produtoPreco", registro));
@@ -143,7 +141,7 @@ namespace Projeto_Final.Repositorios
         private string PrepararRegistroCSV(Pedido pedido)
         {
             ulong id = pedido.Id == 0 ? CONT : pedido.Id;
-            return $"id={id};clienteNome={pedido.Cliente.Nome};clienteEndereco={pedido.Cliente.Endereco};clienteTelefone={pedido.Cliente.Telefone};clienteEmail={pedido.Cliente.Email};hamburguerNome={pedido.Produto.Nome};hamburguerPreco={pedido.Produto.Preco};dataPedido={pedido.DataPedido};precoTotal={pedido.PrecoTotal}+\n";
+            return $"id={id};clienteNome={pedido.Cliente.Nome};clienteEmail={pedido.Cliente.Email};hamburguerNome={pedido.Produto.Nome};hamburguerPreco={pedido.Produto.Preco};dataPedido={pedido.DataPedido};precoTotal={pedido.PrecoTotal}+\n";
         }
     }
 }

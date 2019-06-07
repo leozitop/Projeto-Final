@@ -36,7 +36,7 @@ namespace Projeto_Final
             
             services.AddSession(options =>
             {
-                options.Cookie.Name="ponto_digital.Session";
+                options.Cookie.Name="Projeto-Final.Session";
                 options.IdleTimeout = TimeSpan.FromSeconds(5);
                 options.Cookie.IsEssential = true;
             });
@@ -58,6 +58,7 @@ namespace Projeto_Final
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+            app.UseSession();
 
             app.UseMvc(routes =>
             {

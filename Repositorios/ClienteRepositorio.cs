@@ -7,7 +7,7 @@ using Projeto_Final.Repositorios;
 
 namespace Projeto_Final.Repositories {
     public class ClienteRepositorio : BaseRepositorio{
-         public static uint CONT = 0;
+        public static uint CONT = 0;
         private const string PATH = "Database/Cliente.csv";
         private const string PATH_INDEX = "Database/Cliente_Id.csv";
         private List<Cliente> clientes = new List<Cliente> ();
@@ -83,10 +83,10 @@ namespace Projeto_Final.Repositories {
             return resultado;
         }
 
-        public Cliente ObterPor (ulong id) {
+        public Cliente ObterPor (ulong Id) {
 
             foreach (var item in ObterRegistrosCSV (PATH)) {
-                if (id.Equals (ExtrairCampo (id.ToString(), item))) {
+                if (Id.Equals (ExtrairCampo (Id.ToString(), item))) {
                     return ConverterEmObjeto (item);
                 }
             }
@@ -124,17 +124,16 @@ namespace Projeto_Final.Repositories {
             cliente.Nome = ExtrairCampo("nome", registro);
             cliente.Email = ExtrairCampo("email", registro);
             cliente.Senha = ExtrairCampo("senha", registro);
-            cliente.Endereco = ExtrairCampo("endereco", registro);
-            cliente.Telefone = ExtrairCampo("telefone", registro);
             cliente.DataNascimento = DateTime.Parse(ExtrairCampo("data_nascimento", registro));
 
             return cliente;
         }
 
         private string PrepararRegistroCSV (Cliente cliente) {
-            return $"id={CONT};nome={cliente.Nome};email={cliente.Email};senha={cliente.Senha};endereco={cliente.Endereco};telefone={cliente.Telefone};data_nascimento={cliente.DataNascimento};\n";
+            return $"id={CONT};nome={cliente.Nome};email={cliente.Email};senha={cliente.Senha};data_nascimento={cliente.DataNascimento};\n";
         }
 
+        
 
     }
 }    

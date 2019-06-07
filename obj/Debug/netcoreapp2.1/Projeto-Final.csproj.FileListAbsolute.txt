@@ -29,3 +29,7 @@ C:\Users\45684686800\Documents\Projeto Final\Projeto-Final\obj\Debug\netcoreapp2
 C:\Users\45684686800\Documents\Projeto Final\Projeto-Final\obj\Debug\netcoreapp2.1\Projeto-Final.dll
 C:\Users\45684686800\Documents\Projeto Final\Projeto-Final\obj\Debug\netcoreapp2.1\Projeto-Final.pdb
 C:\Users\45684686800\Documents\Projeto Final\Projeto-Final\obj\Debug\netcoreapp2.1\Projeto-Final.csproj.CopyComplete
+C:\Users\45684686800\Documents\Projeto Final\Projeto-Final\obj\Debug\netcoreapp2.1\Razor\Views\Cliente\Login.g.cshtml.cs
+C:\Users\45684686800\Documents\Projeto Final\Projeto-Final\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Falha.g.cshtml.cs
+C:\Users\45684686800\Documents\Projeto Final\Projeto-Final\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Sucesso.g.cshtml.cs
+C:\Users\45684686800\Documents\Projeto Final\Projeto-Final\obj\Debug\netcoreapp2.1\Razor\Views\Comentarios\Index.g.cshtml.cs

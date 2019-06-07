@@ -8,7 +8,7 @@ using Projeto_Final.ViewModels;
 
 namespace Projeto_Final.Controllers
 {
-    public class PedidoController
+    public class PedidoController : Controller
     {
         private const string SESSION_EMAIL = "_EMAIL";
         private const string SESSION_CLIENTE = "_CLIENTE";
@@ -29,10 +29,6 @@ namespace Projeto_Final.Controllers
             return View(pedido);
         }
 
-        private IActionResult View(PedidoViewModel pedido)
-        {
-            throw new NotImplementedException();
-        }
 
         [HttpPost]
         public IActionResult RegistrarPedido(IFormCollection form)
@@ -42,8 +38,6 @@ namespace Projeto_Final.Controllers
             Cliente cliente = new Cliente();
             cliente.Nome = form["nome"];
             cliente.Email = form["email"];
-            cliente.Endereco = form["endereco"];
-            cliente.Telefone = form["telefone"];
 
             Plano plano = new Plano(
             Nome: form["plano"],
