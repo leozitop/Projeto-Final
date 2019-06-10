@@ -1,5 +1,15 @@
+@{
+    ViewData["Title"] = "Sessão Depoimentos";
+    ViewData["h2"] = "Comentários";
+}
+    <header>
+        @{
+            Html.RenderPartial("_HeaderNavBar", ViewData["user"]);
+        }
+    </header>
 
 <main>
+    <h2>@ViewData["h2"]</h2>
     <form method="POST" action='@Url.Action("Comentarios", "CadastroDepoimento")'>
         <div>
             <label for="comentario">Insira seu depoimento sobre o produto</label>

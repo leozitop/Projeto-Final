@@ -1,0 +1,18 @@
+@{
+    ViewData["Title"] =  "Tela de Aprovação";
+    ViewData["h2"] = "Tela de Aprovação";
+}
+
+    <header>
+        @{
+            Html.RenderPartial("_HeaderNavBar", ViewData["user"]);
+        }
+    </header>
+
+<h2>@ViewData["h2"]</h2>
+
+<form method="POST" action='@Url.Action("")'>
+    <input type="submit" value="aprovar">
+
+    <input type="submit" value="reprovar">
+</form>

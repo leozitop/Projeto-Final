@@ -131,7 +131,7 @@ WriteAttributeValue("", 464, Url.Action("Index", "Home"), 464, 28, false);
             WriteLiteral("                <li>");
             EndContext();
             BeginContext(598, 79, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1c3b55f30aee4efb8119741a5a9cd4c2", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f83320decfc0478199a699ca92906c90", async() => {
                 BeginContext(659, 14, true);
                 WriteLiteral("Login/Cadastro");
                 EndContext();
@@ -164,7 +164,7 @@ WriteAttributeValue("", 464, Url.Action("Index", "Home"), 464, 28, false);
             WriteLiteral("                <li>");
             EndContext();
             BeginContext(724, 75, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "52129f259f4347cc9cc134c58415ebdb", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "22ca272a8b6c42099bf2170792c4dbc9", async() => {
                 BeginContext(789, 6, true);
                 WriteLiteral("Logout");
                 EndContext();
@@ -197,7 +197,7 @@ WriteAttributeValue("", 464, Url.Action("Index", "Home"), 464, 28, false);
             WriteLiteral("\r\n            <li>");
             EndContext();
             BeginContext(839, 70, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "717901d66cf343f2a7e429ac921d889d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "34e299d3effd4813bc0c8acafa503067", async() => {
                 BeginContext(900, 5, true);
                 WriteLiteral("Pedir");
                 EndContext();
