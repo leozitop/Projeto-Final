@@ -16,16 +16,16 @@ namespace Projeto_Final.Repositorios
                 var valores = item.Split(";");
                 Plano plano = new Plano();
                 plano.Nome = valores[1];
-                plano.Preco = double.Parse(valores[2]);
+                plano.Preco = valores[2];
 
                 this.Planos.Add(plano);
             }
             return this.Planos;
         }
 
-        public double ObterPrecoDe(string nomePlano){
+        public string ObterPrecoDe(string nomePlano){
             var lista = Listar();
-            var preco = 0.0;
+            var preco = "0.0";
 
             foreach (var item in lista)
             {

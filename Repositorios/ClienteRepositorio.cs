@@ -1,9 +1,11 @@
-
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using Projeto_Final.Models;
 using Projeto_Final.Repositorios;
+using System.Text.RegularExpressions;
+using System.Security.AccessControl;
 
 namespace Projeto_Final.Repositories {
     public class ClienteRepositorio : BaseRepositorio{
@@ -85,8 +87,10 @@ namespace Projeto_Final.Repositories {
 
         public Cliente ObterPor (ulong Id) {
 
-            foreach (var item in ObterRegistrosCSV (PATH)) {
-                if (Id.Equals (ExtrairCampo (Id.ToString(), item))) {
+            foreach (var item in ObterRegistrosCSV (PATH)) 
+            {
+                if (Id.Equals (ExtrairCampo (Id.ToString(), item))) 
+                {
                     return ConverterEmObjeto (item);
                 }
             }

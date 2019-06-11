@@ -9,7 +9,7 @@ namespace Projeto_Final.Models
 
         }
 
-        public Plano(string Nome, double Preco)
+        public Plano(string Nome, string Preco)
         {
             this.Nome = Nome;
             this.Preco = Preco;

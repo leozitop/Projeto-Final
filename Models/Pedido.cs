@@ -8,6 +8,6 @@ namespace Projeto_Final.Models
         public Cliente Cliente{get;set;}
         public Produto Produto{get;set;}
         public DateTime DataPedido{get;set;}
-        public double PrecoTotal{get;set;}
+        public string PrecoTotal{get;set;}
     }
 }

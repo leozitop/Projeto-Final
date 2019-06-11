@@ -20,8 +20,7 @@ namespace Projeto_Final.Controllers
         public IActionResult Index()
         {
             var planos = planoRepositorio.Listar();
-            var cliente = clienteRepositorio.ObterPor(HttpContext.Session.GetString(SESSION_EMAIL));
-            
+            var cliente = clienteRepositorio.ObterPor(HttpContext.Session.GetString(SESSION_EMAIL));            
             PedidoViewModel pedido = new PedidoViewModel();
             pedido.Planos = planos;
             pedido.Cliente = cliente == null ? new Cliente() : cliente;

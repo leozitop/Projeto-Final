@@ -4,6 +4,6 @@ namespace Projeto_Final.Models
     {
         public ulong Id{get;set;}
         public string Nome{get;set;}
-        public double Preco{get;set;}
+        public string Preco{get;set;}
     }
 }

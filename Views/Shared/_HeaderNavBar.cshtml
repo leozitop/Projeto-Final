@@ -4,11 +4,12 @@
 <nav>
     <div class="section-container">
         <ul>
-            <li><a href='@Url.Action("Index", "Home")"#quem_somos"'>Sobre</a></li>
-            <li><a href='@Url.Action("Index", "Home")"#historia"'>História</a></li>
-            <li><a href='@Url.Action("Index", "Home")"#planos"'>Planos</a></li>
-            <li><a href='@Url.Action("Index", "Home")"#equipe"'>Equipe</a></li>
-            <li><a href='@Url.Action("Index", "Home")"#local"'>Local</a></li>
+            <li><a asp-controller="Home" asp-ction="Index" class="active">Home</a></li>
+            <li><a href='@Url.Action("Index", "Home")#quem_somos'>Sobre</a></li>
+            <li><a href='@Url.Action("Index", "Home")#historia'>História</a></li>
+            <li><a href='@Url.Action("Index", "Home")#planos'>Planos</a></li>
+            <li><a href='@Url.Action("Index", "Home")#equipe'>Equipe</a></li>
+            <li><a href='@Url.Action("Index", "Home")#local'>Local</a></li>
             @if(string.IsNullOrEmpty(user))
             {
                 <li><a id="bt_login" asp-controller="Cliente" asp-action="Login">Login/Cadastro</a></li>

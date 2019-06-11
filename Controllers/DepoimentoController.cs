@@ -14,7 +14,7 @@ namespace Projeto_Final.Controllers
             return View();
         }
 
-        public IActionResult CadastrarComentario(IFormCollection form){
+        public IActionResult CadastroDepoimento(IFormCollection form){
             Depoimento comentario = new Depoimento();
             comentario.NomeCliente = form["nome"];
             comentario.Comentario = form["comentario"];
@@ -23,7 +23,7 @@ namespace Projeto_Final.Controllers
             depoimentoRepositorio.Inserir(comentario);
 
             ViewData["Action"] = "CadastroDepoimento";
-            return View();
+            return View("Index", "Aprovação");
         }
     }
 }

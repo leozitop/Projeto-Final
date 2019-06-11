@@ -130,9 +130,9 @@ namespace Projeto_Final.Repositorios
             pedido.Cliente.Nome = ExtrairCampo("clienteNome", registro);
             pedido.Cliente.Email = ExtrairCampo("clienteEmail", registro);
             pedido.Produto.Nome = ExtrairCampo("produtoNome", registro);
-            pedido.Produto.Preco = double.Parse(ExtrairCampo("produtoPreco", registro));
+            pedido.Produto.Preco = ExtrairCampo("produtoPreco", registro);
             pedido.DataPedido = DateTime.Parse(ExtrairCampo("dataPedido", registro));
-            pedido.PrecoTotal = double.Parse(ExtrairCampo("precoTotal", registro));
+            pedido.PrecoTotal = ExtrairCampo("precoTotal", registro);
             
             return pedido;
         }
