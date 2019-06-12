@@ -11,7 +11,28 @@
 
 <h2>@ViewData["h2"]</h2>
 
-<form method="POST" action='@Url.Action("")'>
+<form method="POST" action='@Url.Action("Aprovar", "Aprovacao")'>
+    <table>
+        <thead>
+            <tr>
+                <th>Comentarios</th>
+            </tr>
+        </thead>
+    </table>
+
+    <table>
+        @foreach (var item in Model.Depoimento) {
+            @if(item == null){
+                continue;
+            }
+        }
+        <tbody>
+            <tr>
+                <td>@item.Comentario</td>
+            </tr>
+        </tbody>
+    </table>
+
     <input type="submit" value="aprovar">
 
     <input type="submit" value="reprovar">

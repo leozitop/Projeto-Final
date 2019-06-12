@@ -20,6 +20,8 @@ namespace Projeto_Final.Controllers
             comentario.Comentario = form["comentario"];
             comentario.DataComentario = DateTime.Parse(form["data-comentario"]);
 
+            comentario.DataComentario = DateTime.Now;
+
             depoimentoRepositorio.Inserir(comentario);
 
             ViewData["Action"] = "CadastroDepoimento";
