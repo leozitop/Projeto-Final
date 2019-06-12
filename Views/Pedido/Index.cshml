@@ -45,6 +45,6 @@
             </select>
         </div>
 
-        <input type="submit" value="Encomendar produto!">
+        <input type="submit" value="Pedir!">
     </form>
 </main>

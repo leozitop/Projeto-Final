@@ -12,7 +12,8 @@ namespace Projeto_Final.Controllers
         private const string SESSION_CLIENTE = "_CLIENTE";
         
         [HttpGet]
-        public IActionResult Login(){
+        public IActionResult Login()
+        {
             return View();
         }
 
@@ -29,7 +30,7 @@ namespace Projeto_Final.Controllers
                 HttpContext.Session.SetString(SESSION_CLIENTE, cliente.Nome);
             }
 
-            return View("Index", "Depoimentos");
+            return RedirectToAction("Index", "Depoimento");    
         }
 
         public IActionResult Logout(){

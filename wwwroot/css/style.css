@@ -303,14 +303,16 @@ iframe {
     width: 100%;
 }
 
-footer {
+.flex-container.footer {
     background-color: #000;
     font-weight: bold;
     text-align: center;
     color: #fff;
 }
 
-address {
+address img{
     padding: 10px 0;
     font-style: normal;
+    height: 20px;
+    width: 20px;
 }

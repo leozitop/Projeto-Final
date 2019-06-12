@@ -4,8 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="~/css/style.css" rel="stylesheet" type="text/css">
+    @if (!"Home".Equals((string) ViewData["NomeView"]))
+    {
+        <link href="~/css/style-form.css" rel="stylesheet" type="text/css">
+    }
 </head>
-<body class="flex-container">
+<body class="flex-container footer">
 
     @RenderBody()
     <footer>
@@ -15,19 +19,11 @@
                 <br>
                 Telefone: +55 11 1234-4321
                 <br>
-                agora.vai@email.com
+                agora.vai@email.com/agoravai.facebook.com
                 <br>
-                <img src="imagens/facebook.png" alt="">
-                <img src="imagens/gmail.png" alt="">
+                <img src="images/gmail.png" alt="">
+                <img src="images/facebook.png" alt="">
             </address>
         </div>
     </footer>
-
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy;Empresa Agora Vai</p>
-        </footer>
-    </div>
 </body>

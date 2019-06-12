@@ -32,5 +32,5 @@ C:\Users\45684686800\Documents\Projeto Final\Projeto-Final\obj\Debug\netcoreapp2
 C:\Users\45684686800\Documents\Projeto Final\Projeto-Final\obj\Debug\netcoreapp2.1\Razor\Views\Cliente\Login.g.cshtml.cs
 C:\Users\45684686800\Documents\Projeto Final\Projeto-Final\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Falha.g.cshtml.cs
 C:\Users\45684686800\Documents\Projeto Final\Projeto-Final\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Sucesso.g.cshtml.cs
-C:\Users\45684686800\Documents\Projeto Final\Projeto-Final\obj\Debug\netcoreapp2.1\Razor\Views\Aprovação\Index.g.cshtml.cs
-C:\Users\45684686800\Documents\Projeto Final\Projeto-Final\obj\Debug\netcoreapp2.1\Razor\Views\Depoimentos\Index.g.cshtml.cs
+C:\Users\45684686800\Documents\Projeto Final\Projeto-Final\obj\Debug\netcoreapp2.1\Razor\Views\Aprovacao\Index.g.cshtml.cs
+C:\Users\45684686800\Documents\Projeto Final\Projeto-Final\obj\Debug\netcoreapp2.1\Razor\Views\Depoimento\Index.g.cshtml.cs
