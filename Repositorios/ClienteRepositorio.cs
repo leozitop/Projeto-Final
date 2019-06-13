@@ -36,55 +36,6 @@ namespace Projeto_Final.Repositories {
             return true;
         }
 
-        public bool Atualizar (Cliente cliente) {
-            var clientesRecuperados = ObterRegistrosCSV (PATH);
-            var clienteString = PrepararRegistroCSV (cliente);
-            var linhaCliente = -1;
-            var resultado = false;
-
-            for (int i = 0; i < clientesRecuperados.Length; i++) {
-                if (clienteString.Equals (clientesRecuperados[i])) {
-                    linhaCliente = i;
-                    resultado = true;
-                }
-            }
-            if (linhaCliente >= 0) {
-                clientesRecuperados[linhaCliente] = clienteString;
-                File.WriteAllLines (PATH, clientesRecuperados);
-            }
-
-            return resultado;
-
-        }
-
-        public bool Apagar (ulong id) {
-
-            var clientesRecuperados = ObterRegistrosCSV (PATH);
-            var linhaCliente = -1;
-            var resultado = false;
-
-            for (int i = 0; i < clientesRecuperados.Length; i++) {
-                if (id.Equals (clientesRecuperados[i])) {
-                    linhaCliente = i;
-                    resultado = true;
-                }
-            }
-
-            if (linhaCliente >= 0) {
-                clientesRecuperados[linhaCliente] = "";
-                try {
-                    File.WriteAllLines (PATH, clientesRecuperados);
-
-                } catch(DirectoryNotFoundException dnfe) {
-                    System.Console.WriteLine("Diretório não encontrado. Favor verificar.");
-                } catch (PathTooLongException ptle) {
-                    System.Console.WriteLine("Nome do arquivo é muito grande.");
-                }
-            }
-
-            return resultado;
-        }
-
         public Cliente ObterPor (ulong Id) {
 
             foreach (var item in ObterRegistrosCSV (PATH)) 

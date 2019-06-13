@@ -13,6 +13,12 @@
     <h2>@ViewData["h2"]</h2>
     <form method="POST" action='@Url.Action("CadastroDepoimento", "Depoimento")'>
         <div>
+            <label for="nome">digite seu nome</label>
+            <br>
+            <input type="text" name="nome" id="nome" maxlength="40">
+        </div>
+
+        <div>
             <label for="comentario">Insira seu depoimento sobre o produto</label>
             <br>
             <input type="text" name="comentario" id="comentario" maxlength="200">

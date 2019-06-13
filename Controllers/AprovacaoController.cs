@@ -1,5 +1,7 @@
+using System;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Projeto_Final.Models;
 using Projeto_Final.Repositorios;
 
 namespace Projeto_Final.Controllers
@@ -13,14 +15,8 @@ namespace Projeto_Final.Controllers
             return View();
         }
 
-        
-        private void OnMouseDown(IFormCollection form) {
-            if 
-            {
-                
-            }
+        public IActionResult Aprovar(IFormCollection form){
+            return View();
         }
-            
-        
     }
 }

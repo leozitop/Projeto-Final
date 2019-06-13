@@ -18,13 +18,12 @@ namespace Projeto_Final.Controllers
             Depoimento comentario = new Depoimento();
             comentario.NomeCliente = form["nome"];
             comentario.Comentario = form["comentario"];
-            comentario.DataComentario = DateTime.Parse(form["data-comentario"]);
 
             comentario.DataComentario = DateTime.Now;
 
             depoimentoRepositorio.Inserir(comentario);
 
-            ViewData["Action"] = "CadastroDepoimento";
+            ViewData["Action"] = "Depoimento";
             return View("Index", "Aprovação");
         }
     }

@@ -19,7 +19,7 @@ namespace Projeto_Final.Repositorios
 
             comentario.Id = CONT;
 
-            StreamWriter sw = new StreamWriter("dpoimentos.csv");
+            StreamWriter sw = new StreamWriter("depoimentos.csv");
             sw.WriteLine($"{comentario.Id};{comentario.NomeCliente}:{comentario.Comentario};{comentario.DataComentario}");
             sw.Close();
 

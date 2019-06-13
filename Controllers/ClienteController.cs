@@ -28,9 +28,11 @@ namespace Projeto_Final.Controllers
             {
                 HttpContext.Session.SetString(SESSION_EMAIL, usuario);
                 HttpContext.Session.SetString(SESSION_CLIENTE, cliente.Nome);
+                return RedirectToAction("Index", "Depoimento"); 
             }
+            return RedirectToAction("Index", "Aprovacao");
 
-            return RedirectToAction("Index", "Depoimento");    
+               
         }
 
         public IActionResult Logout(){

@@ -15,25 +15,27 @@
     <table>
         <thead>
             <tr>
+                <th>Id</th>
                 <th>Comentarios</th>
+                <th>Nome do autor</th>
+                <th>Data</th>
             </tr>
         </thead>
     </table>
 
     <table>
-        @foreach (var item in Model.Depoimento) {
-            @if(item == null){
-                continue;
-            }
-        }
         <tbody>
-            <tr>
-                <td>@item.Comentario</td>
-            </tr>
+            @foreach (var item in Model.Depoimento) {
+                @if(item == null){
+                    continue;
+                }
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Comentario</td>
+                    <td>@item.NomeCliente</td>
+                    <td>@item.DataComentario</td>
+                </tr>
+            }
         </tbody>
     </table>
-
-    <input type="submit" value="aprovar">
-
-    <input type="submit" value="reprovar">
 </form>
