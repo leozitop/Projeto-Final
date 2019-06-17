@@ -1,0 +1,41 @@
+@{
+    ViewData["Title"] =  "Comentários";
+    ViewData["h2"] = "Tela de comentários";
+}
+
+    <header>
+        @{
+            Html.RenderPartial("_HeaderNavBar", ViewData["user"]);
+        }
+    </header>
+
+<h2>@ViewData["h2"]</h2>
+
+<form method="POST" action='@Url.Action("Listar", "Aprovados")'>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Comentarios</th>
+                <th>Nome do autor</th>
+                <th>Data</th>
+            </tr>
+        </thead>
+    </table>
+
+    <table>
+        <tbody>
+            @foreach (var item in Model.Depoimento) {
+                @if(item == null){
+                    continue;
+                }
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Comentario</td>
+                    <td>@item.NomeCliente</td>
+                    <td>@item.DataComentario</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</form>

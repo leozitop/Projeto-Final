@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Projeto_Final.Models;
@@ -15,8 +16,16 @@ namespace Projeto_Final.Controllers
             return View();
         }
 
-        public IActionResult Aprovar(IFormCollection form){
-            return View();
+        public List<Depoimento> ListarComentario(Depoimento depoimento){
+            List<Depoimento> listaDeComentarios = depoimentoRepositorio.Listar();
+            foreach (var item in listaDeComentarios)
+            {
+                if (item != null)
+                {
+                    Console.WriteLine($"Nome do Autor: {item.NomeCliente}; Depoimento: {item.Comentario}; data: {item.DataComentario}");
+                }
+            }
+            return View("Index", "Aprovados");
         }
     }
 }
